@@ -1,0 +1,67 @@
+<section id='user' class='superbox-list constainer-fluid grid'>
+	{{#each users}}
+		<div class='main-feed user'>
+			<div class='row' id='user-feed-card'>
+				<div class='col mb-3'>
+					<div class='card grid'>
+
+						<img
+							src='/assets/images/sign-up.png'
+							alt='Cover'
+							class='card-img-top'
+						/>
+
+						<div class='card-body text-center'>
+							<div class='user-avatar'>
+								<a href='/feed-routes/user/{{id}}'><img
+										src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
+										style='width:120px;margin-top:-95px; border-radius: 15px;'
+										alt='User'
+										class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
+									/></a>
+							</div>
+							<h2 class='card-title' align='center'><strong>
+									{{username}}
+								</strong></h2>
+							<h3 class='card-title' align='center'>{{email}}</h3>
+							<br />
+
+							<div class='Interests'>
+
+								{{!-- {{#each Interests}} --}}
+								<section class='interest'>
+									<div class='meta'>
+
+										{{!-- on
+											{{format_date created_at}} --}}
+									</div>
+									{{!-- <div class='text'>
+										{{Interest_Category}}
+									</div> --}}
+								</section>
+								{{!-- {{/each}} --}}
+							</div>
+							<div class='interest'>
+								<h3>INTERESTS</h3>
+
+								<li> {{interestOne}}</li>
+								<li> {{interestTwo}}</li>
+								<li> {{interestThree}}</li>
+								<li> {{interestFour}}</li>
+								<li> {{interestFive}}</li>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	{{/each}}
+	<div class='footer'>
+		<h4 class='footer-title'>
+			-- End --
+		</h4>
+	</div>
+</section>
+
+<script src='/javascript/user-feed.js'></script>

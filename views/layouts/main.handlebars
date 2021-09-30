@@ -1,0 +1,64 @@
+<html lang='en'>
+
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<title>High 5!</title>
+
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+
+	</head>
+
+	<body>
+
+		<header>
+			<nav class='navbar sticky-top navbar-dark navbar-expand-md'>
+				<ul class='menu'>
+					<li class='logo col-6'><a class='navbar-brand' href='/dashboard'>
+							<img
+								role='img'
+								aria-label='Go To Dashboard'
+								alt='High5! Brand Logo'
+								src='/assets/images/high5logo.png'
+								height='42'
+								width='42'
+							/>
+						</a></li>
+					{{#if loggedIn}}
+
+						<li class='item button btn-primary row-cols-md-3'>
+							<a href='/feed-routes'>See All Users</a>
+						</li>
+						<li class='item button btn-primary row-cols-md-3'>
+							<a href='/'>Log Out</a>
+						</li>
+
+					{{else}}
+						<li>
+							{{! <a href='/'>Log In</a> }}
+						</li>
+					{{/if}}
+				</ul>
+			</nav>
+		</header>
+		<main class='container'>
+			{{{body}}}
+		</main>
+
+		{{! <footer>
+				Thanks for visiting!
+			</footer> }}
+		<!-- Latest compiled and minified JavaScript -->
+		<script
+			src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
+			integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd'
+			crossorigin='anonymous'
+		></script>
+		{{#if loggedIn}}
+			<script src='/javascript/logout.js'></script>
+		{{/if}}
+	</body>
+
+</html>
+
+<div class='inner'></div>
